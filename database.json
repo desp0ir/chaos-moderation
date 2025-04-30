@@ -1,0 +1,46 @@
+{
+  "525678239704678400afk": "true",
+  "525678239704678400messageafk": [],
+  "afk-525678239704678400+770558896690430002": "",
+  "afk-288383542604333057+770558896690430002": "Pırıl'ın götünü yiyom",
+  "otorolisim_770558896690430002": "☯☯",
+  "autoRole_770558896690430002": "791032527619620884",
+  "reklam_770558896690430002": "acik",
+  "snipe.770558896690430002.791337384565932082": {
+    "yazar": "525678239704678400",
+    "yazilmaTarihi": 1608748156260,
+    "silinmeTarihi": 1608748159239,
+    "dosya": false
+  },
+  "snipe.770558896690430002.791337384565932082.icerik": "agagagagadgAG",
+  "snipe.770558896690430002.791025750794305547": {
+    "yazar": "525678239704678400",
+    "yazilmaTarihi": 1608795914743,
+    "silinmeTarihi": 1608795930533,
+    "dosya": false
+  },
+  "snipe.770558896690430002.791025750794305547.icerik": "!cmute <@!288383542604333057> 5m deneme",
+  "reklamkick_770558896690430002": "acik",
+  "reklamuyari_288383542604333057": 17,
+  "snipe.770558896690430002.791665503193006080": {
+    "yazar": "288383542604333057",
+    "yazilmaTarihi": 1608889737157,
+    "silinmeTarihi": 1608889737361,
+    "dosya": false
+  },
+  "snipe.770558896690430002.791665503193006080.icerik": "if(command === \"!güvenli\") {\n    let hedef;\n    let rol = message.mentions.roles.first() || message.guild.roles.cache.get(args[0]) || message.guild.roles.cache.find(r => r.name === args.join(\" \"));\n    let uye = message.mentions.users.first() || message.guild.members.cache.get(args[0]);\n    if (rol) hedef = rol;\n    if (uye) hedef = uye;\n    let guvenliler = ayarlar.whitelist || [];\n    if (!hedef) return message.channel.send(embed.setDescription(`Güvenli listeye eklemek/kaldırmak için bir hedef (rol/üye) belirtmelisin!`).addField(\"Güvenli Liste\", guvenliler.length > 0 ? guvenliler.map(g => (message.guild.roles.cache.has(g.slice(1)) || message.guild.members.cache.has(g.slice(1))) ? (message.guild.roles.cache.get(g.slice(1)) || message.guild.members.cache.get(g.slice(1))) : g).join('\\n') : \"Bulunamadı!\"));\n    if (guvenliler.some(g => g.includes(hedef.id))) {\n      guvenliler = guvenliler.filter(g => !g.includes(hedef.id));\n      ayarlar.whitelist = guvenliler;\n      fs.writeFile(\"./ayarlar.json\", JSON.stringify(ayarlar), (err) => {\n        if (err) console.log(err);\n      });\n      message.channel.send(embed.setDescription(`${hedef}, ${message.author} tarafından güvenli listeden kaldırıldı!`));\n    } else {\n      ayarlar.whitelist.push(`y${hedef.id}`);\n      fs.writeFile(\"./ayarlar.json\", JSON.stringify(ayarlar), (err) => {\n        if (err) console.log(err);\n      });\n      message.channel.send(embed.setDescription(`${hedef}, ${message.author} tarafından güvenli listeye eklendi!`));\n    };",
+  "snipe.770558896690430002.791968115181223946": {
+    "yazar": "288383542604333057",
+    "yazilmaTarihi": 1612253239833,
+    "silinmeTarihi": 1612253238919,
+    "dosya": false
+  },
+  "snipe.770558896690430002.791968115181223946.icerik": "sg",
+  "snipe.805131059678412811.805131061688139808": {
+    "yazar": "288383542604333057",
+    "yazilmaTarihi": 1612256616305,
+    "silinmeTarihi": 1612256618381,
+    "dosya": false
+  },
+  "snipe.805131059678412811.805131061688139808.icerik": "if()\n{}"
+}
